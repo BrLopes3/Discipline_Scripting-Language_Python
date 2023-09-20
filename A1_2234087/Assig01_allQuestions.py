@@ -4,11 +4,16 @@ Date: 2023-09-17
 Author: Bruno Lopes
 
 """
+### Main Menu
 
-print("Assignment 1: Scripting Language")
-print("================================")
-print("Chose a number to define the question you want to execute:")
-print("1 - Question 1\n2 - Question 2\n3 - Question 3\n4 - Question 4\n5 - Question 5\n6 - Question 6\n7 - Question 7\n8 - Question 8\n9 - Question 9\n")
+def printMenu():
+    print("Assignment 1: Scripting Language")
+    print("================================")
+    print("Chose a number to define the question you want to execute:")
+    print("1 - Question 1\n2 - Question 2\n3 - Question 3\n4 - Question 4\n5 - Question 5\n6 - Question 6\n7 - Question 7\n8 - Question 8\n9 - Question 9\n")
+    
+printMenu()
+
 
 def question1():
     
@@ -29,6 +34,16 @@ def question1():
     else:
      print(f"The sum of {number1} and {number2} is {summ}")
 
+    print("========================")
+    print("Do you want to come back to the main menu? (Y/N)")
+    answer = input("Answer: ")
+    if answer == "Y" or answer == "y":
+        printMenu()
+        question = int(input("Option: "))
+        menu(question)
+    else:
+        print("Bye!")
+
 def question2():
     print("Assignment 1: Question 2")
     print("========================")
@@ -44,6 +59,17 @@ def question2():
 
     print(f"The average of the numbers is: {average}")
 
+    print("========================")
+    print("Do you want to come back to the main menu? (Y/N)")
+    answer = input("Answer: ")
+    if answer == "Y" or answer == "y":
+        printMenu()
+        question = int(input("Option: "))
+        menu(question)
+    else:
+        print("Bye!")
+
+
 def question3():
     print("Assignment 1: Question 3")
     print("========================")
@@ -53,6 +79,16 @@ def question3():
         print(f"a string made of the middle three chars of this String: {stringInput[middle-1:middle+2]}")
     else:
         print("Invalid input")
+    
+    print("========================")
+    print("Do you want to come back to the main menu? (Y/N)")
+    answer = input("Answer: ")
+    if answer == "Y" or answer == "y":
+        printMenu()
+        question = int(input("Option: "))
+        menu(question)
+    else:
+        print("Bye!")
 
 def question4():
     print("Assignment 1: Question 4")
@@ -61,6 +97,16 @@ def question4():
     n = int(input("Enter an integer: "))
     newString = stringInput[n+1:]
     print(f"The new string created removing characters from 0 to {n} of the original string is: {newString}")
+
+    print("========================")
+    print("Do you want to come back to the main menu? (Y/N)")
+    answer = input("Answer: ")
+    if answer == "Y" or answer == "y":
+        printMenu()
+        question = int(input("Option: "))
+        menu(question)
+    else:
+        print("Bye!")
 
 def question5():
     print("Assignment 1: Question 5")
@@ -84,6 +130,16 @@ def question5():
         print(f"List 2 analysis: {True}, the first and last numbers are same")
     else:
         print(f"List 2 analysis: {False}, the first and last numbers are NOT the same")
+    
+    print("========================")
+    print("Do you want to come back to the main menu? (Y/N)")
+    answer = input("Answer: ")
+    if answer == "Y" or answer == "y":
+        printMenu()
+        question = int(input("Option: "))
+        menu(question)
+    else:
+        print("Bye!")
 
 def question6():
     print("Assignment 1: Question 6")
@@ -99,6 +155,16 @@ def question6():
 
     print(f"The new string created with the composition of {string1} and {string2} is: {newString}")
 
+    print("========================")
+    print("Do you want to come back to the main menu? (Y/N)")
+    answer = input("Answer: ")
+    if answer == "Y" or answer == "y":
+        printMenu()
+        question = int(input("Option: "))
+        menu(question)
+    else:
+        print("Bye!")
+
 def question7():
     print("Assignment 1: Question 7")
     print("========================")
@@ -110,6 +176,16 @@ def question7():
     numberOfUSA = sentence.count("USA") + sentence.count("usa")
 
     print(f"The sentence has {numberOfUSA} occurrences of USA/usa.")
+
+    print("========================")
+    print("Do you want to come back to the main menu? (Y/N)")
+    answer = input("Answer: ")
+    if answer == "Y" or answer == "y":
+        printMenu()
+        question = int(input("Option: "))
+        menu(question)
+    else:
+        print("Bye!")
 
 def question8():
     print("Assignment 1: Question 8")
@@ -130,6 +206,16 @@ def question8():
     print("List created with the odd index of List 1 and even index of List 2: ")
     print(f"List 3: {listThree}")
 
+    print("========================")
+    print("Do you want to come back to the main menu? (Y/N)")
+    answer = input("Answer: ")
+    if answer == "Y" or answer == "y":
+        printMenu()
+        question = int(input("Option: "))
+        menu(question)
+    else:
+        print("Bye!")
+
 def question9():
     print("Assignment 1: Question 9")
     print("========================")
@@ -146,6 +232,15 @@ def question9():
 
     print(f"List adding the element at the 2nd position also at the end:\n{list}\n")
 
+    print("========================")
+    print("Do you want to come back to the main menu? (Y/N)")
+    answer = input("Answer: ")
+    if answer == "Y" or answer == "y":
+        printMenu()
+        question = int(input("Option: "))
+        menu(question)
+    else:
+        print("Bye!")
 
 question = int(input("Option: "))
 
@@ -172,3 +267,4 @@ def menu(question):
         print("Invalid option. Please try again.")
 
 menu(question)
+
