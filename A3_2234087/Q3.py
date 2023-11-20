@@ -9,6 +9,8 @@ both lists in the pair.
 
 list1 = [10, 20, 30.5, 67]
 list2 = [21, 34, 44, 88]
+print(zip(list1, list2))
+
 set1 = set(zip(list1, list2))
 
 print(set1)
